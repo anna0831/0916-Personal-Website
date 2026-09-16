@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="strawberry">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Mia | Cozy Little Space & Live Time 🌸</title>
+  <meta name="description" content="Cozy personal space and cute dynamic real-time clock. Customize your profile and enjoy pastel vibes!">
+  <meta name="keywords" content="cute personal page, kawaii portfolio, live clock, pastel website, cozy space">
+  <meta name="author" content="Mia">
+
+  <!-- Cute Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+
+  <!-- Google Fonts: Fredoka & Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cute Floating Sparkles and Bubbles Background -->
+  <div class="floating-items" aria-hidden="true">
+    <span class="float-item item-1">🌸</span>
+    <span class="float-item item-2">✨</span>
+    <span class="float-item item-3">💖</span>
+    <span class="float-item item-4">☁️</span>
+    <span class="float-item item-5">⭐</span>
+    <span class="float-item item-6">🍡</span>
+    <span class="float-item item-7">🎀</span>
+  </div>
+
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Cute Navbar -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="brand-badge">🌸 COZY HUB</span>
+      <span class="brand-text">my sweet space ✨</span>
+    </div>
+    
+    <div class="nav-controls">
+      <!-- Send Hearts / Sparkles Button -->
+      <button id="sparkle-btn" class="control-btn sparkle-btn" title="Send cute sparkles!" aria-label="Sparkle hearts">
+        <span>💖 Tap for Love</span>
+      </button>
+
+      <!-- Time Format Toggle -->
+      <button id="format-toggle-btn" class="control-btn" title="Toggle 12h / 24h format" aria-label="Toggle time format">
+        <span class="icon">⏰</span>
+        <span id="format-label">12H</span>
+      </button>
+
+      <!-- Cute Theme Switcher -->
+      <div class="theme-dropdown">
+        <button id="theme-btn" class="control-btn" aria-label="Switch Theme">
+          <span id="theme-icon">🍓</span>
+          <span id="theme-label">Berry Milk</span>
+        </button>
+        <div class="theme-menu" id="theme-menu" hidden>
+          <button class="theme-opt active" data-theme="strawberry">🍓 Strawberry Milk</button>
+          <button class="theme-opt" data-theme="lavender">💜 Lavender Cloud</button>
+          <button class="theme-opt" data-theme="peach">🍑 Peach Boba</button>
+          <button class="theme-opt" data-theme="cozy-night">🌙 Cozy Midnight</button>
+        </div>
+      </div>
+
+      <!-- Edit Profile Trigger -->
+      <button id="open-edit-modal" class="control-btn primary-btn" title="Customize your details">
+        <span>🎀 Edit Profile</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Cute Profile Hero Section -->
+    <section class="profile-hero cute-card" aria-label="Personal Profile">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring">
+          <img id="profile-avatar" src="assets/avatar.jpg" alt="Cute avatar" class="profile-avatar">
+        </div>
+        <span class="status-indicator" title="Status: Full of happiness!">✨</span>
+      </div>
+
+      <div class="profile-info">
+        <div class="status-pill">
+          <span class="pulse-dot"></span>
+          <span id="display-status">Living happily & crafting cute things 🌸</span>
+        </div>
+        
+        <h1 class="user-name">
+          <span id="display-name" title="Click 'Edit Profile' to change">Mia</span>
+          <button id="quick-edit-name-btn" class="inline-edit-btn" title="Quick edit name" aria-label="Edit name">✎</button>
+        </h1>
+
+        <p class="user-role" id="display-role">Creative Coder & Digital Artist 🎀</p>
+        <p class="user-bio" id="display-bio">Turning sweet imagination into soft pixels, cozy interfaces, and cute interactive magic. Welcome to my little corner of the web! ☕🍰</p>
+
+        <!-- Cute Profile Tags -->
+        <div class="tags-list">
+          <span class="tag">🌸 Web Design</span>
+          <span class="tag">🎨 Pastel Art</span>
+          <span class="tag">🧋 Boba Enthusiast</span>
+          <span class="tag">🎧 Cozy Lo-Fi</span>
+          <span class="tag">✨ Sparkle Coding</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Centerpiece: Dynamic Live Time & Context Section -->
+    <section class="clock-section" aria-label="Current Live Time">
+      <div class="clock-card cute-card">
+        
+        <!-- Greeting Header -->
+        <div class="clock-header">
+          <div class="greeting-box">
+            <span id="greeting-icon" class="greeting-icon">🌸</span>
+            <div class="greeting-texts">
+              <span class="greeting-sub">SWEET LIVE CLOCK</span>
+              <h2 id="greeting-text" class="greeting-title">Good morning, Mia! ✨</h2>
+            </div>
+          </div>
+
+          <div class="clock-badges">
+            <span id="timezone-pill" class="timezone-pill">UTC+08:00</span>
+            <span id="day-progress-pill" class="progress-pill">Day 45%</span>
+          </div>
+        </div>
+
+        <!-- Cute Marshmallow Digital Clock Display -->
+        <div class="digital-clock-container">
+          <div class="digits-group">
+            <div class="digit-box" id="hours-box">
+              <span id="clock-hours">10</span>
+              <span class="digit-label">HOURS 🍓</span>
+            </div>
+            <span class="colon">💖</span>
+            <div class="digit-box" id="minutes-box">
+              <span id="clock-minutes">24</span>
+              <span class="digit-label">MINS 🍡</span>
+            </div>
+            <span class="colon">💖</span>
+            <div class="digit-box" id="seconds-box">
+              <span id="clock-seconds">00</span>
+              <span class="digit-label">SECS ✨</span>
+            </div>
+          </div>
+          
+          <div class="clock-meta-side">
+            <span id="clock-ampm" class="ampm-badge">AM ☀️</span>
+            <span id="clock-millis" class="millis-badge">.000</span>
+          </div>
+        </div>
+
+        <!-- Date & Cute Controls -->
+        <div class="clock-footer">
+          <div class="date-display">
+            <span class="calendar-icon">📅</span>
+            <span id="clock-date" class="date-text">Wednesday, September 16, 2026</span>
+          </div>
+
+          <div class="clock-actions">
+            <button id="copy-time-btn" class="action-btn" title="Copy current timestamp">
+              <span>📋 Copy Time 🌸</span>
+            </button>
+            <button id="toggle-seconds-btn" class="action-btn" title="Toggle cute milliseconds">
+              <span id="toggle-sec-icon">✨ High Precision</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cute Bouncy Day Progression Bar -->
+        <div class="day-bar-wrapper" title="Day progression">
+          <div class="day-bar-fill" id="day-bar-fill" style="width: 45%;">
+            <span class="day-bar-mascot">⭐</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cute Highlights & Stats Grid -->
+    <section class="grid-section">
+      <div class="stat-card cute-card">
+        <span class="stat-icon">🧸</span>
+        <div class="stat-content">
+          <div class="stat-number">100%</div>
+          <div class="stat-title">Cozy Energy Level</div>
+        </div>
+      </div>
+
+      <div class="stat-card cute-card">
+        <span class="stat-icon">🧋</span>
+        <div class="stat-content">
+          <div class="stat-number">2 Bobas</div>
+          <div class="stat-title">Sweet Drinks Today</div>
+        </div>
+      </div>
+
+      <div class="stat-card cute-card">
+        <span class="stat-icon">☁️</span>
+        <div class="stat-content">
+          <div class="stat-number" id="location-counter">Detecting...</div>
+          <div class="stat-title">Cozy Timezone Location</div>
+        </div>
+      </div>
+
+      <div class="stat-card cute-card">
+        <span class="stat-icon">💖</span>
+        <div class="stat-content">
+          <div class="stat-number" id="sparkle-count">0 Hearts</div>
+          <div class="stat-title">Love & Happiness Shared</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social & Contact Links -->
+    <section class="socials-section">
+      <h3 class="section-title">Let's Be Friends! 🌸</h3>
+      <div class="social-links-grid">
+        <a href="https://github.com/anna0831" target="_blank" rel="noopener noreferrer" class="social-card cute-card" id="link-github">
+          <span class="social-icon">🎀</span>
+          <div class="social-text">
+            <span class="social-name">GitHub</span>
+            <span class="social-desc" id="desc-github">@anna0831</span>
+          </div>
+          <span class="arrow-indicator">💖</span>
+        </a>
+
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-card cute-card" id="link-instagram">
+          <span class="social-icon">📸</span>
+          <div class="social-text">
+            <span class="social-name">Instagram</span>
+            <span class="social-desc" id="desc-insta">@mia_doodles</span>
+          </div>
+          <span class="arrow-indicator">💖</span>
+        </a>
+
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-card cute-card" id="link-twitter">
+          <span class="social-icon">🐦</span>
+          <div class="social-text">
+            <span class="social-name">Twitter / X</span>
+            <span class="social-desc" id="desc-twitter">@mia_cozy</span>
+          </div>
+          <span class="arrow-indicator">💖</span>
+        </a>
+
+        <a href="mailto:anna.hsu.831@gmail.com" class="social-card cute-card" id="link-email">
+          <span class="social-icon">💌</span>
+          <div class="social-text">
+            <span class="social-name">Sweet Mail</span>
+            <span class="social-desc" id="desc-email">anna.hsu.831@gmail.com</span>
+          </div>
+          <span class="arrow-indicator">💖</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cute Edit Profile Modal -->
+  <div class="modal-backdrop" id="edit-modal" hidden>
+    <div class="modal-card cute-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title">🌸 Customize Your Profile</h3>
+        <button id="close-modal-btn" class="close-btn" aria-label="Close modal">✕</button>
+      </div>
+
+      <form id="edit-profile-form" class="edit-form">
+        <div class="form-group">
+          <label for="input-name">Your Sweet Name</label>
+          <input type="text" id="input-name" required placeholder="e.g. Mia" maxlength="40">
+        </div>
+
+        <div class="form-group">
+          <label for="input-role">Title / Vibe</label>
+          <input type="text" id="input-role" required placeholder="e.g. Creative Coder & Artist 🎀" maxlength="60">
+        </div>
+
+        <div class="form-group">
+          <label for="input-bio">Cute Bio</label>
+          <textarea id="input-bio" rows="3" placeholder="Share your sweet thoughts..." maxlength="200"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="input-status">Status Message</label>
+          <input type="text" id="input-status" placeholder="e.g. Sipping strawberry milk 🍓" maxlength="50">
+        </div>
+
+        <div class="form-group">
+          <label for="input-github">GitHub Username</label>
+          <input type="text" id="input-github" placeholder="e.g. anna0831" maxlength="40">
+        </div>
+
+        <div class="form-group">
+          <label for="input-email">Contact Email</label>
+          <input type="email" id="input-email" placeholder="e.g. anna.hsu.831@gmail.com">
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" id="reset-profile-btn" class="btn-secondary">Reset to Default</button>
+          <button type="submit" class="btn-primary">Save Changes 💖</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cute Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span id="toast-icon">🌸</span>
+    <span id="toast-msg">Copied! You're wonderful! 💖</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Crafted with lots of 💖 & 🍓 for <span id="footer-name">Mia</span> • <span id="current-year">2026</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
