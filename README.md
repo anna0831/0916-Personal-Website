@@ -1,7 +1,11 @@
 # 🌸 0916-Personal-Website — Cozy Personal Space & Live Clock
 
 > **IoT Assignment & Interactive Personal Webpage**  
-> Crafted with 💖 by **[Anna Hsu](https://github.com/anna0831)** (`@anna0831`)
+> Crafted with 💖 by **[Anna Hsu](https://github.com/anna0831)** (`@anna0831`)  
+> 
+> 🌐 **Live on GitHub**:  
+> 👉 Commit 962c2de is now live on [https://github.com/anna0831/0916-Personal-Website](https://github.com/anna0831/0916-Personal-Website)  
+> 🔗 **Live Demo (GitHub Pages)**: [https://anna0831.github.io/0916-Personal-Website/](https://anna0831.github.io/0916-Personal-Website/)
 
 ![Personal Space Preview](assets/avatar.jpg)
 
@@ -65,14 +69,19 @@ Switch effortlessly between custom-designed pastel palettes via the navbar dropd
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start & Live Demo
 
+### 🌐 Live Online
+- **Live Demo**: [https://anna0831.github.io/0916-Personal-Website/](https://anna0831.github.io/0916-Personal-Website/)
+- **GitHub Repository**: [https://github.com/anna0831/0916-Personal-Website](https://github.com/anna0831/0916-Personal-Website)
+
+### 💻 Running Locally
 No installation or build steps required! Simply open the page in any modern browser:
 
-### Option 1: Direct File
+#### Option 1: Direct File
 Double click `index.html` to view directly in your browser.
 
-### Option 2: Local HTTP Server (Recommended)
+#### Option 2: Local HTTP Server (Recommended)
 Using Python:
 ```bash
 python -m http.server 3000
